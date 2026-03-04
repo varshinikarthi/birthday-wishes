@@ -1,60 +1,109 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
+
 <head>
-    <title>Happy Birthday Sir</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            text-align: center;
-            padding: 30px;
-        }
-        .card {
-            background: white;
-            padding: 25px;
-            max-width: 900px;
-            margin: auto;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.15);
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            font-size: 18px;
-            color: #555;
-        }
-        .gallery {
-            margin-top: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-        .gallery img {
-            width: 100%;
-            border-radius: 10px;
-        }
-    </style>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Happy Birthday 🎉</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <style>
+
+    body {
+
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+
+    }
+
+  </style>
+
 </head>
-<body>
 
-<div class="card">
-    <h1>🎉 Happy Birthday Sir 🎉</h1>
+<body class="min-h-screen flex items-center justify-center px-4">
 
-    <p>
-        You inspire us not only as a teacher but also as a passionate photographer.
-        Your photographs show your talent and creativity, and your work always motivates us.
-        We are proud to learn from you. Wishing you a very happy birthday, sir!
+  <div class="bg-white shadow-2xl rounded-2xl p-6 sm:p-8 max-w-md w-full text-center">
+
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-pink-500 mb-4">🎂 Happy Birthday! 🎂</h1>
+
+    <p class="text-base sm:text-lg text-gray-700 mb-6">
+
+      Wishing you a day filled with love, laughter, and everything that makes you smile.
+
+      May this year bring you happiness, success, and unforgettable memories.
+
     </p>
 
-    <h2>📸 Photographs by Sir</h2>
 
-    <div class="gallery">
-        <img src="https://img.sanishtech.com/u/81b8bc0a2f799072bb536de856ebe78f.png">
-        <img src="PHOTO_LINK_2" alt="Photograph by Sir">
-        <img src="PHOTO_LINK_3" alt="Photograph by Sir">
-    </div>
-</div>
+    <div class="text-5xl sm:text-6xl mb-6">🎉🎈🎁</div>
+
+
+    <p class="text-gray-600 italic text-sm sm:text-base">
+
+      "Count your life by smiles, not tears. Count your age by friends, not years."
+
+    </p>
+
+
+    <button onclick="celebrate()" class="mt-6 px-6 py-3 bg-pink-500 text-white rounded-xl shadow hover:bg-pink-600 transition w-full sm:w-auto">
+
+      Click for a Surprise 🎊
+
+    </button>
+
+
+    <p id="surprise" class="mt-4 text-lg sm:text-xl font-semibold text-purple-600 hidden">
+  You are amazing! Have the best birthday ever! 💖
+</p>
+
+<img 
+  id="surprisePhoto"
+  <img src="https://img.sanishtech.com/u/81b8bc0a2f799072bb536de856ebe78f.png" alt="Screenshot_20260304-203206" width="685" height="599" loading="lazy" style="max-width:100%;height:auto;">"
+  alt="Special Photograph"
+  class="mt-4 rounded-xl shadow-lg hidden mx-auto max-h-64"
+/>
+
+    </p>
+
+  </div>
+
+
+  <script>
+
+    function celebrate() {
+
+      document.getElementById('surprise').classList.remove('hidden');
+
+
+      confetti({
+
+        particleCount: 150,
+
+        spread: 70,
+
+        origin: { y: 0.6 }
+
+      });
+
+
+      setTimeout(() => {
+
+        confetti({ particleCount: 100, spread: 120, origin: { x: 0.1 } });
+
+        confetti({ particleCount: 100, spread: 120, origin: { x: 0.9 } });
+
+      }, 300);
+
+    }
+
+  </script>
 
 </body>
+
 </html>
